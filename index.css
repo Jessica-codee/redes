@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: rgba(25, 25, 25, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    width: 450px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    border: 3px solid transparent;
+    animation: neon-border 1.5s infinite alternate;
+}
+
+/* Animación de neón */
+@keyframes neon-border {
+    0% {
+        border-color: rgba(0, 255, 255, 0.8);
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    }
+    100% {
+        border-color: rgba(255, 0, 255, 0.8);
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+    }
+}
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.profile h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.profile p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.links {
+    margin-top: 30px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #222;
+    color: #fff;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    animation: neon-border 1.5s infinite alternate
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(45deg, cyan, magenta, cyan);
+    top: -10%;
+    left: -10%;
+    z-index: -1;
+    filter: blur(10px);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.link:hover::before {
+    opacity: 1;
+    width: 130%;
+    height: 130%;
+    filter: blur(20px);
+}
+
+.link i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.link:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: cyan;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px cyan;
+}
+
+.link i {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    
+}
